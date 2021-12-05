@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorlogo1"
+    >
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:text="REPORT"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/edt_Noidunfreport"
+        android:minLines="5"
+        android:lines="5"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_view"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+/>
+    <Button
+        android:id="@+id/btnSendReport"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/border_button"
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
