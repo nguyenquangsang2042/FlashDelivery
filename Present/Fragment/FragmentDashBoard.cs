@@ -2,6 +2,8 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
+using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
@@ -30,6 +32,9 @@ namespace FlashDelivery.Present.Fragment
         private DashBoardAdapter dashBoardAdapter;
         private RadioButton radioMoney, radioKM;
         private ImageButton _btnGotoListShip;
+        private AndroidX.AppCompat.Widget.Toolbar btnLeftMenu;
+        private DrawerLayout drawerLayout;
+        private NavigationView navigationView;
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -48,15 +53,29 @@ namespace FlashDelivery.Present.Fragment
             radioMoney = _rootView.FindViewById<RadioButton>(Resource.Id.radioMoneyDB);
             radioKM = _rootView.FindViewById<RadioButton>(Resource.Id.radioKMDB);
             _btnGotoListShip = _rootView.FindViewById<ImageButton>(Resource.Id.btnGotoListShip);
-
+            btnLeftMenu = _rootView.FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.btnLeftMenu);
+            drawerLayout = _rootView.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            navigationView = _rootView.FindViewById<NavigationView>(Resource.Id.navigationView1);
             initValue();
+            ActionBar action= SupportActionBar
             _btnGotoListShip.Click += _btnGotoListShip_Click;
             radioMoney.Click += RadioMoney_Click;
             radioMoney.Checked = true;
             radioKM.Click += RadioKM_Click;
             return _rootView;
         }
-
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch(item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    drawerLayout.OpenDrawer((int)GravityFlags.Left);
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }    
+            
+        }
         private void _btnGotoListShip_Click(object sender, EventArgs e)
         {
             FragmentListShip fragmentListShip = new FragmentListShip();
