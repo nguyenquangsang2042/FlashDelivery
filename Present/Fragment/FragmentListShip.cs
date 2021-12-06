@@ -48,7 +48,7 @@ namespace FlashDelivery.Present.Fragment
             radioMoney = _rootView.FindViewById<RadioButton>(Resource.Id.radioMoneyDB);
             radioKM = _rootView.FindViewById<RadioButton>(Resource.Id.radioKMDB);
             _btnGotoListShip = _rootView.FindViewById<ImageButton>(Resource.Id.btnGotoListShip);
-            _btnGotoListShip.Visibility = ViewStates.Gone;
+            _btnGotoListShip.Visibility = ViewStates.Invisible;
             textViewTitle = _rootView.FindViewById<TextView>(Resource.Id.textViewTitle);
             textViewTitle.Text = "LIST SHIP";
             initValue();

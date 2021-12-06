@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SANGNQ\\UdemyProject\\FlashDelivery\\FlashDelivery.csproj": {}
+    "D:\\Project\\FlashDelivery\\FlashDelivery.csproj": {}
   },
   "projects": {
-    "D:\\SANGNQ\\UdemyProject\\FlashDelivery\\FlashDelivery.csproj": {
+    "D:\\Project\\FlashDelivery\\FlashDelivery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SANGNQ\\UdemyProject\\FlashDelivery\\FlashDelivery.csproj",
+        "projectUniqueName": "D:\\Project\\FlashDelivery\\FlashDelivery.csproj",
         "projectName": "FlashDelivery",
-        "projectPath": "D:\\SANGNQ\\UdemyProject\\FlashDelivery\\FlashDelivery.csproj",
-        "packagesPath": "C:\\Users\\sangnq\\.nuget\\packages\\",
-        "outputPath": "D:\\SANGNQ\\UdemyProject\\FlashDelivery\\obj\\",
+        "projectPath": "D:\\Project\\FlashDelivery\\FlashDelivery.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\FlashDelivery\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\sangnq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

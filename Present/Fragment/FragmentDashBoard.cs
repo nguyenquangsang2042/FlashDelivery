@@ -53,33 +53,29 @@ namespace FlashDelivery.Present.Fragment
             radioMoney = _rootView.FindViewById<RadioButton>(Resource.Id.radioMoneyDB);
             radioKM = _rootView.FindViewById<RadioButton>(Resource.Id.radioKMDB);
             _btnGotoListShip = _rootView.FindViewById<ImageButton>(Resource.Id.btnGotoListShip);
-            btnLeftMenu = _rootView.FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.btnLeftMenu);
-            drawerLayout = _rootView.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            navigationView = _rootView.FindViewById<NavigationView>(Resource.Id.navigationView1);
             initValue();
-            ActionBar action= SupportActionBar
             _btnGotoListShip.Click += _btnGotoListShip_Click;
             radioMoney.Click += RadioMoney_Click;
             radioMoney.Checked = true;
             radioKM.Click += RadioKM_Click;
             return _rootView;
         }
+
+       
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch(item.ItemId)
+            switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    drawerLayout.OpenDrawer((int)GravityFlags.Left);
+                    drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
                     return true;
-                default:
-                    return base.OnOptionsItemSelected(item);
-            }    
-            
+            }
+            return base.OnOptionsItemSelected(item);
         }
         private void _btnGotoListShip_Click(object sender, EventArgs e)
         {
             FragmentListShip fragmentListShip = new FragmentListShip();
-            mainAct.ShowFragment(mainAct.FragmentManager, fragmentListShip, "fragment_DetailItem");
+            mainAct.ShowFragment(mainAct.FragmentManager, fragmentListShip, "fragment_ListShip");
         }
 
         private void RadioMoney_Click(object sender, EventArgs e)
