@@ -23,6 +23,11 @@
 		android:title="Summary"
 		android:icon="@drawable/profile"
 		/>
+		<item
+		android:id="@+id/navLogout"
+		android:title="Logout"
+		android:icon="@drawable/profile"
+		/>
 	</group>
   
 </menu>

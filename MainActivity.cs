@@ -8,6 +8,7 @@ using Android.Views.InputMethods;
 using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.DrawerLayout.Widget;
+using FlashDelivery.Class;
 using FlashDelivery.Present.Fragment;
 
 namespace FlashDelivery
@@ -70,6 +71,32 @@ namespace FlashDelivery
                 ShowFragment(FragmentManager, fragmentDashBoard, "FragmentDashBoard");
                 drawer_layout.CloseDrawers();
             }
+            if (e.MenuItem.ItemId == Resource.Id.navProfile)
+            {
+                FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
+                ShowFragment(FragmentManager, fragmentDashBoard, "FragmentDashBoard");
+                drawer_layout.CloseDrawers();
+                SupportActionBar.Title = "PROFILE";
+
+            }
+            if (e.MenuItem.ItemId == Resource.Id.navListShip)
+            {
+                FragmentListShip fragmentListShip = new FragmentListShip();
+                ShowFragment(FragmentManager, fragmentListShip, "FragmentDashBoard");
+                drawer_layout.CloseDrawers();
+                SupportActionBar.Title = "LISTSHIP";
+            }
+            if (e.MenuItem.ItemId == Resource.Id.navSummary)
+            {
+                SupportActionBar.Title = "SUMARY";
+            }
+            if (e.MenuItem.ItemId == Resource.Id.navLogout)
+            {
+                FragmentManager.PopBackStack();
+                CmmVariable.user = null;
+                CmmVariable.pass = null;
+            }
+
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
