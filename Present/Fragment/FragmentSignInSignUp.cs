@@ -73,6 +73,7 @@ namespace FlashDelivery.Present.Fragment
             _btnRegister.Click += _btnRegister_Click;
             _btnLogin.Click += _btnLogin_Click;
             _tvForgotPW.Click += _tvForgotPW_Click;
+            mainAct.lockAndUnlockNavBar(true, "");
             return _rootView;
         }
 
