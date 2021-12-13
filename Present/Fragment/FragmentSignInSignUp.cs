@@ -23,7 +23,7 @@ namespace FlashDelivery.Present.Fragment
         private EditText _edtUser, _edtPass;
         private TextView _tvForgotPW;
         private FirebaseHelpdesk firebaseHelpdesk;
-        bool isback=false;
+        bool isback = false;
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,12 +33,12 @@ namespace FlashDelivery.Present.Fragment
         public override void OnAttach(Activity activity)
         {
             base.OnAttach(activity);
-              
+
         }
         public override void OnDetach()
         {
             base.OnDetach();
-            
+
         }
         public override void OnResume()
         {
@@ -79,43 +79,46 @@ namespace FlashDelivery.Present.Fragment
 
         private void _tvForgotPW_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private async void _btnLogin_Click(object sender, EventArgs e)
         {
             mainAct.HideKeyboard(_rootView);
-            if(_edtUser.Text!=""&&_edtPass.Text!="")
+            if (_edtUser.Text != "" && _edtPass.Text != "")
             {
                 CmmVariable.user = _edtUser.Text;
                 CmmVariable.pass = _edtPass.Text;
                 List<BeanUser> lstBeanUser = await firebaseHelpdesk.GetAllPersonsAsync();
                 lstBeanUser = lstBeanUser.Where(x => x.username == _edtUser.Text && x.passWord == _edtPass.Text).ToList();
-                if(lstBeanUser.Count==0)
+                if (lstBeanUser.Count == 0)
                 {
                     Toast.MakeText(mainAct.ApplicationContext, "Don't found your account", ToastLength.Long).Show();
                 }
                 else
                 {
-                    if(lstBeanUser[0].type==CmmVariable.AdminCode)
+                    if (lstBeanUser[0].type == CmmVariable.AdminCode)
                     {
+                        CmmVariable.userType = CmmVariable.AdminCode;
+
                         FragmentAdminCreateItem fragmentAdminCreateItem = new FragmentAdminCreateItem();
-                        mainAct.ShowFragment(FragmentManager, fragmentAdminCreateItem, "FragmentAdminCreateItem");
+                        mainAct.ShowFragment(FragmentManager, fragmentAdminCreateItem, "");
                     }
                     else
                     {
+                        CmmVariable.userType = 0;
                         FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
-                        mainAct.ShowFragment(FragmentManager, fragmentDashBoard, "FragmentDashBoard");
+                        mainAct.ShowFragment(FragmentManager, fragmentDashBoard, "");
                     }
 
                 }
-                
-            }   
+
+            }
             else
             {
                 try
                 {
-                  
+
                     Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(mainAct);
                     alert.SetTitle("Alert");
                     alert.SetMessage("Your user/password incorect");
@@ -124,20 +127,20 @@ namespace FlashDelivery.Present.Fragment
                         _edtPass.Text = "";
                         _edtUser.Text = "";
                         alert.Dispose();
-                    });                   
+                    });
                     Dialog dialog = alert.Create();
                     dialog.SetCanceledOnTouchOutside(false);
                     dialog.Show();
                 }
                 catch (Exception ex)
                 { }
-            }    
+            }
         }
 
         private void _btnRegister_Click(object sender, EventArgs e)
         {
             FragmentSignUp fragmentSignUp = new FragmentSignUp();
-            mainAct.ShowFragment(FragmentManager, fragmentSignUp, "FragmentSignUp");
+            mainAct.ShowFragment(FragmentManager, fragmentSignUp, "");
         }
 
 

@@ -85,7 +85,24 @@ namespace FlashDelivery.Class
 
               }).ToList();
         }
+        public async Task<List<BeanItemDetails>> GetAllListReport()
+        {
 
+            return (await firebase
+              .Child("BeanReport")
+              .OnceAsync<BeanItemDetails>()).Select(item => new BeanItemDetails
+              {
+                  user = item.Object.user,
+                  pass = item.Object.pass,
+                  key = item.Key,
+                  pakage_Name = item.Object.pakage_Name,
+                  kilomet = item.Object.kilomet,
+                  ListItemChild = item.Object.ListItemChild,
+                  location = item.Object.location,
+                  Money = item.Object.Money
+
+              }).ToList();
+        }
         public async Task AddItemToListShip(BeanItemShip beanItemDetails)
         {
 

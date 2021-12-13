@@ -35,7 +35,7 @@ namespace FlashDelivery.Present.Fragment
             _rootView = inflater.Inflate(Resource.Layout.layout_splash, null);
             Task.Delay(3000).ContinueWith(t => {
                 FragmentSignInSignUp fragmentSignInSignUp = new FragmentSignInSignUp();
-                mainAct.ShowFragment(FragmentManager, fragmentSignInSignUp, "FragmentSignInSignUp");
+                mainAct.ShowFragment(FragmentManager, fragmentSignInSignUp, "");
             });
             
             return _rootView;

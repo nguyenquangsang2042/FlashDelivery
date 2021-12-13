@@ -152,12 +152,12 @@ public final class R {
 		public static final int browser_actions_context_menu_page = 0x7f0b001c;
 		public static final int browser_actions_context_menu_row = 0x7f0b001d;
 		public static final int custom_dialog = 0x7f0b001e;
-		public static final int notification_action = 0x7f0b0041;
-		public static final int notification_action_tombstone = 0x7f0b0042;
-		public static final int notification_template_custom_big = 0x7f0b0049;
-		public static final int notification_template_icon_group = 0x7f0b004a;
-		public static final int notification_template_part_chronometer = 0x7f0b004e;
-		public static final int notification_template_part_time = 0x7f0b004f;
+		public static final int notification_action = 0x7f0b0042;
+		public static final int notification_action_tombstone = 0x7f0b0043;
+		public static final int notification_template_custom_big = 0x7f0b004a;
+		public static final int notification_template_icon_group = 0x7f0b004b;
+		public static final int notification_template_part_chronometer = 0x7f0b004f;
+		public static final int notification_template_part_time = 0x7f0b0050;
 	}
 	public static final class string {
 		public static final int copy_toast_msg = 0x7f0e0021;

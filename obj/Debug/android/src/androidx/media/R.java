@@ -37,15 +37,15 @@ public final class R {
 		public static final int cancel_button_image_alpha = 0x7f090004;
 	}
 	public static final class layout {
-		public static final int notification_media_action = 0x7f0b0043;
-		public static final int notification_media_cancel_action = 0x7f0b0044;
-		public static final int notification_template_big_media = 0x7f0b0045;
-		public static final int notification_template_big_media_custom = 0x7f0b0046;
-		public static final int notification_template_big_media_narrow = 0x7f0b0047;
-		public static final int notification_template_big_media_narrow_custom = 0x7f0b0048;
-		public static final int notification_template_lines_media = 0x7f0b004b;
-		public static final int notification_template_media = 0x7f0b004c;
-		public static final int notification_template_media_custom = 0x7f0b004d;
+		public static final int notification_media_action = 0x7f0b0044;
+		public static final int notification_media_cancel_action = 0x7f0b0045;
+		public static final int notification_template_big_media = 0x7f0b0046;
+		public static final int notification_template_big_media_custom = 0x7f0b0047;
+		public static final int notification_template_big_media_narrow = 0x7f0b0048;
+		public static final int notification_template_big_media_narrow_custom = 0x7f0b0049;
+		public static final int notification_template_lines_media = 0x7f0b004c;
+		public static final int notification_template_media = 0x7f0b004d;
+		public static final int notification_template_media_custom = 0x7f0b004e;
 	}
 	public static final class style {
 		public static final int TextAppearance_Compat_Notification_Info_Media = 0x7f0f0119;

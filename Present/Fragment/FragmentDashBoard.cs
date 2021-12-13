@@ -76,7 +76,7 @@ namespace FlashDelivery.Present.Fragment
         private void _btnGotoListShip_Click(object sender, EventArgs e)
         {
             FragmentListShip fragmentListShip = new FragmentListShip();
-            mainAct.ShowFragment(mainAct.FragmentManager, fragmentListShip, "fragment_ListShip");
+            mainAct.ShowFragment(mainAct.FragmentManager, fragmentListShip, "");
         }
 
         private void RadioMoney_Click(object sender, EventArgs e)

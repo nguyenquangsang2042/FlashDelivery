@@ -30,12 +30,12 @@ namespace FlashDelivery
             // init navigation bar
 
 
-            lockAndUnlockNavBar(true,"");
+            lockAndUnlockNavBar(true, "");
 
             StartView = new FragmentStartView();
-            ShowFragment(FragmentManager, StartView, "StartView");
+            ShowFragment(FragmentManager, StartView, "");
         }
-        public void lockAndUnlockNavBar(bool Lock,string headerNameToolbar)
+        public void lockAndUnlockNavBar(bool Lock, string headerNameToolbar)
         {
             drawer_layout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             toolbar_app = FindViewById<Toolbar>(Resource.Id.toolbar_app);
@@ -49,13 +49,13 @@ namespace FlashDelivery
             }
             else
             {
-                drawer_layout.SetDrawerLockMode(DrawerLayout.LockModeUnlocked); 
+                drawer_layout.SetDrawerLockMode(DrawerLayout.LockModeUnlocked);
                 toolbar_app.Visibility = ViewStates.Visible;
                 SetSupportActionBar(toolbar_app);
                 SupportActionBar.Title = headerNameToolbar;
                 AndroidX.AppCompat.App.ActionBar actionBar = SupportActionBar;
                 toolbar_app.SetTitleTextColor(Color.White);
-                actionBar.SetDisplayHomeAsUpEnabled(true);
+                actionBar.SetDisplayHomeAsUpEnabled(false);
                 navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
 
 
@@ -65,16 +65,16 @@ namespace FlashDelivery
 
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
-            if(e.MenuItem.ItemId==Resource.Id.navDashBoard)
+            if (e.MenuItem.ItemId == Resource.Id.navDashBoard)
             {
                 FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
-                ShowFragment(FragmentManager, fragmentDashBoard, "FragmentDashBoard");
+                ShowFragment(FragmentManager, fragmentDashBoard, "");
                 drawer_layout.CloseDrawers();
             }
             if (e.MenuItem.ItemId == Resource.Id.navProfile)
             {
                 FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
-                ShowFragment(FragmentManager, fragmentDashBoard, "FragmentDashBoard");
+                ShowFragment(FragmentManager, fragmentDashBoard, "");
                 drawer_layout.CloseDrawers();
                 SupportActionBar.Title = "PROFILE";
 
@@ -82,19 +82,25 @@ namespace FlashDelivery
             if (e.MenuItem.ItemId == Resource.Id.navListShip)
             {
                 FragmentListShip fragmentListShip = new FragmentListShip();
-                ShowFragment(FragmentManager, fragmentListShip, "FragmentDashBoard");
+                ShowFragment(FragmentManager, fragmentListShip, "");
                 drawer_layout.CloseDrawers();
                 SupportActionBar.Title = "LISTSHIP";
             }
             if (e.MenuItem.ItemId == Resource.Id.navSummary)
             {
-                SupportActionBar.Title = "SUMARY";
+                Fragment_ReportList fragment_ReportList = new Fragment_ReportList();
+                ShowFragment(FragmentManager, fragment_ReportList, "");
+                drawer_layout.CloseDrawers();
+                SupportActionBar.Title = "Report";
+
             }
             if (e.MenuItem.ItemId == Resource.Id.navLogout)
             {
-                FragmentManager.PopBackStack();
-                CmmVariable.user = null;
-                CmmVariable.pass = null;
+                FragmentSignInSignUp fragmentSignInSignUp = new FragmentSignInSignUp();
+                ShowFragment(FragmentManager, fragmentSignInSignUp, "");
+
+                drawer_layout.CloseDrawers();
+
             }
 
         }
@@ -131,7 +137,8 @@ namespace FlashDelivery
                 fragmentTx.Replace(Resource.Id.frmMain, fragToShow, fragTag);
                 if (fm.FindFragmentByTag(fragTag) == null)
                 {
-                    fragmentTx.AddToBackStack(fragTag);
+                    if (!string.IsNullOrEmpty(fragTag))
+                        fragmentTx.AddToBackStack(fragTag);
                 }
                 fragmentTx.SetTransition(FragmentTransit.FragmentFade);
                 fragmentTx.Commit();

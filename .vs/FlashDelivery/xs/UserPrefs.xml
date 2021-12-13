@@ -1,21 +1,38 @@
 ﻿<Properties StartupConfiguration="{201F73DE-9531-4B03-B56A-5EBB36F723B1}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainActivity.cs">
+    <Files>
+      <File FileName="MainActivity.cs" Line="101" Column="1" />
+      <File FileName="Class/CmmVariable.cs" />
+      <File FileName="Present/Fragment/FragmentSignInSignUp.cs" />
+      <File FileName="Present/Fragment/Fragment_ReportList.cs" />
+      <File FileName="Class/Provider/FirebaseHelpdesk.cs" />
+      <File FileName="Resources/layout/Layout_ReportlistForShipper.xml" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlashDelivery" expanded="True">
-            <Node name="FlashDelivery" expanded="True" selected="True" />
+            <Node name="FlashDelivery" expanded="True">
+              <Node name="Class" expanded="True">
+                <Node name="Provider" expanded="True" />
+              </Node>
+              <Node name="Present" expanded="True">
+                <Node name="Adapter" expanded="True" />
+                <Node name="Fragment" expanded="True" />
+              </Node>
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.FlashDelivery PreferredExecutionTarget="Android.7PMZ6HJ7Y9SKR8FM" />
+  <MonoDevelop.Ide.ItemProperties.FlashDelivery AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.7PMZ6HJ7Y9SKR8FM" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -18,6 +18,6 @@ namespace FlashDelivery.Class
         public static string user { get; set; }
         public static string pass { get; set; }
         public static string id_firebae { get; set; }
-
+        public static int userType { get; set; }
     }
 }

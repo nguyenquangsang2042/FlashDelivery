@@ -108,12 +108,12 @@ namespace FlashDelivery.Present.Adapter
                 if (isListShip)
                 {
                     Fragment_DetailItem fragment_DetailItem = new Fragment_DetailItem(beanItemDetails, isListShip);
-                    mainAct.ShowFragment(mainAct.FragmentManager, fragment_DetailItem, "fragment_DetailItemFromListShip");
+                    mainAct.ShowFragment(mainAct.FragmentManager, fragment_DetailItem, "f");
                 }
                 else
                 {
                     Fragment_DetailItem fragment_DetailItem = new Fragment_DetailItem(beanItemDetails, isListShip);
-                    mainAct.ShowFragment(mainAct.FragmentManager, fragment_DetailItem, "fragment_DetailItem");
+                    mainAct.ShowFragment(mainAct.FragmentManager, fragment_DetailItem, "");
                 }
             }
         }

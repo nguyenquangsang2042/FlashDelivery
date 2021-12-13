@@ -38,6 +38,7 @@ foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 FrameLayout;obj/Debug/res/layout/layout_dashboard.xml
 FrameLayout;obj/Debug/res/layout/layout_main.xml
+FrameLayout;obj/Debug/res/layout/layout_reportlistforshipper.xml
 FrameLayout;obj/Debug/res/layout/layout_signin_signup.xml
 FrameLayout;obj/Debug/res/layout/layout_splash.xml
 gradient;obj/Debug/res/drawable/border_button.xml
@@ -48,12 +49,14 @@ ImageButton;obj/Debug/res/layout/layout_dashboard.xml
 ImageButton;obj/Debug/res/layout/layout_detailitem.xml
 ImageButton;obj/Debug/res/layout/layout_list_ship.xml
 ImageButton;obj/Debug/res/layout/layout_profile.xml
+ImageButton;obj/Debug/res/layout/layout_reportlistforshipper.xml
 ImageButton;obj/Debug/res/layout/layout_sumary.xml
 ImageButton;obj/Debug/res/layout/layoutlistship.xml
 ImageView;obj/Debug/res/layout/layout_admin_create.xml
 ImageView;obj/Debug/res/layout/layout_signup.xml
 ImageView;obj/Debug/res/layout/layout_splash.xml
 include;obj/Debug/res/layout/layout_dashboard.xml
+include;obj/Debug/res/layout/layout_reportlistforshipper.xml
 item;obj/Debug/res/drawable/custom_editext.xml
 item;obj/Debug/res/menu/navmenu.xml
 item;obj/Debug/res/values/styles.xml
@@ -69,6 +72,7 @@ LinearLayout;obj/Debug/res/layout/layout_main.xml
 LinearLayout;obj/Debug/res/layout/layout_popup_report.xml
 LinearLayout;obj/Debug/res/layout/layout_popupadddetails.xml
 LinearLayout;obj/Debug/res/layout/layout_profile.xml
+LinearLayout;obj/Debug/res/layout/layout_reportlistforshipper.xml
 LinearLayout;obj/Debug/res/layout/layout_signin_signup.xml
 LinearLayout;obj/Debug/res/layout/layout_signup.xml
 LinearLayout;obj/Debug/res/layout/layout_sumary.xml
@@ -90,6 +94,7 @@ RelativeLayout;obj/Debug/res/layout/layout_list_ship.xml
 RelativeLayout;obj/Debug/res/layout/layout_popup_report.xml
 RelativeLayout;obj/Debug/res/layout/layout_popupadddetails.xml
 RelativeLayout;obj/Debug/res/layout/layout_profile.xml
+RelativeLayout;obj/Debug/res/layout/layout_reportlistforshipper.xml
 RelativeLayout;obj/Debug/res/layout/layout_signin_signup.xml
 RelativeLayout;obj/Debug/res/layout/layout_signup.xml
 RelativeLayout;obj/Debug/res/layout/layout_sumary.xml
@@ -123,6 +128,7 @@ TextView;obj/Debug/res/layout/layout_list_ship.xml
 TextView;obj/Debug/res/layout/layout_popup_report.xml
 TextView;obj/Debug/res/layout/layout_popupadddetails.xml
 TextView;obj/Debug/res/layout/layout_profile.xml
+TextView;obj/Debug/res/layout/layout_reportlistforshipper.xml
 TextView;obj/Debug/res/layout/layout_signin_signup.xml
 TextView;obj/Debug/res/layout/layout_signup.xml
 TextView;obj/Debug/res/layout/layout_sumary.xml
