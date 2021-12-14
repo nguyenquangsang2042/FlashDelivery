@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{201F73DE-9531-4B03-B56A-5EBB36F723B1}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="MainActivity.cs">
     <Files>
-      <File FileName="MainActivity.cs" Line="101" Column="1" />
+      <File FileName="MainActivity.cs" Line="129" Column="57" />
       <File FileName="Class/CmmVariable.cs" />
       <File FileName="Present/Fragment/FragmentSignInSignUp.cs" />
       <File FileName="Present/Fragment/Fragment_ReportList.cs" />
@@ -32,7 +32,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.FlashDelivery AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.7PMZ6HJ7Y9SKR8FM" />
+  <MonoDevelop.Ide.ItemProperties.FlashDelivery AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

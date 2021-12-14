@@ -63,6 +63,7 @@ namespace FlashDelivery
 
         }
 
+        [System.Obsolete]
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             if (e.MenuItem.ItemId == Resource.Id.navDashBoard)
@@ -123,6 +124,8 @@ namespace FlashDelivery
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        [System.Obsolete]
         public void ShowFragment(Android.App.FragmentManager fm, Android.App.Fragment fragToShow, string fragTag)
         {
 
