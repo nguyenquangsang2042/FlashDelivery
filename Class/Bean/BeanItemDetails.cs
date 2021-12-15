@@ -20,6 +20,7 @@ namespace FlashDelivery.Class.Bean
         public string location { get; set; }
         public int kilomet { get; set; }
         public int Money { get; set; }
+       
         public List<ItemChild> ListItemChild { get; set; }
     }
 }

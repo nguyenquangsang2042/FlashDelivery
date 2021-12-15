@@ -32,9 +32,9 @@ namespace FlashDelivery.Present.Fragment
         private View _rootView;
         private LayoutInflater _inflater;
         private RecyclerView recyclerViewDashBoard;
-        private List<BeanItemDetails> lstBeanItemDetail = new List<BeanItemDetails>();
+        private List<BeanReport> lstBeanItemDetail = new List<BeanReport>();
         private FirebaseHelpdesk firebaseHelpdesk = new FirebaseHelpdesk();
-        private DashBoardAdapter dashBoardAdapter;
+        private AdapterReport dashBoardAdapter;
         private RadioButton radioMoney, radioKM;
         private ImageButton _btnGotoListShip;
         private AndroidX.AppCompat.Widget.Toolbar btnLeftMenu;
@@ -92,7 +92,7 @@ namespace FlashDelivery.Present.Fragment
             {
 
                 lstBeanItemDetail = lstBeanItemDetail.OrderByDescending(x => x.Money).ToList();
-                dashBoardAdapter = new DashBoardAdapter(mainAct, lstBeanItemDetail);
+                dashBoardAdapter = new AdapterReport(mainAct, lstBeanItemDetail);
                 recyclerViewDashBoard.SetLayoutManager(new LinearLayoutManager(_rootView.Context));
                 recyclerViewDashBoard.NestedScrollingEnabled = false;
                 recyclerViewDashBoard.SetAdapter(dashBoardAdapter);
@@ -105,7 +105,7 @@ namespace FlashDelivery.Present.Fragment
             {
 
                 lstBeanItemDetail = lstBeanItemDetail.OrderBy(x => x.kilomet).ToList();
-                dashBoardAdapter = new DashBoardAdapter(mainAct, lstBeanItemDetail);
+                dashBoardAdapter = new AdapterReport(mainAct, lstBeanItemDetail);
                 recyclerViewDashBoard.SetLayoutManager(new LinearLayoutManager(_rootView.Context));
                 recyclerViewDashBoard.NestedScrollingEnabled = false;
                 recyclerViewDashBoard.SetAdapter(dashBoardAdapter);
@@ -117,28 +117,31 @@ namespace FlashDelivery.Present.Fragment
 
             lstBeanItemDetail = await firebaseHelpdesk.GetAllListReport();
             lstBeanItemDetail = await firebaseHelpdesk.GetAllListReport();
+            lstBeanItemDetail = lstBeanItemDetail.Where(x => x.user == CmmVariable.user).ToList();
             if (lstBeanItemDetail.Count != 0 && lstBeanItemDetail != null)
             {
 
                 lstBeanItemDetail = lstBeanItemDetail.OrderByDescending(x => x.Money).ToList();
-                dashBoardAdapter = new DashBoardAdapter(mainAct, lstBeanItemDetail);
+                dashBoardAdapter = new AdapterReport(mainAct, lstBeanItemDetail);
                 recyclerViewDashBoard.SetLayoutManager(new LinearLayoutManager(_rootView.Context));
                 recyclerViewDashBoard.NestedScrollingEnabled = false;
                 recyclerViewDashBoard.SetAdapter(dashBoardAdapter);
             }
+            var countSuccec = lstBeanItemDetail.Where(x => x.TypeSHip == 1).Count();
+            var counterror = lstBeanItemDetail.Where(x => x.TypeSHip != 1).Count();
             var entries = new[]
-            { new ChartEntry(212)
+            { new ChartEntry(counterror)
                  {
                      Label = "Fails",
-                     ValueLabel = "212",
+                     ValueLabel = counterror.ToString(),
                      Color=SkiaSharp.SKColor.Parse("#e03143"),
                      ValueLabelColor=SkiaSharp.SKColor.Parse("#e03143"),
                      
                  },
-                 new ChartEntry(248)
+                 new ChartEntry(countSuccec)
                  {
                      Label = "Success",
-                     ValueLabel = "248",
+                     ValueLabel = countSuccec.ToString(),
                      Color=SkiaSharp.SKColor.Parse("#3254a8"),
                      ValueLabelColor=SkiaSharp.SKColor.Parse("#3254a8")
                  },

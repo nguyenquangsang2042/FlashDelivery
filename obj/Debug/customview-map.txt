@@ -26,6 +26,7 @@ corners;obj/Debug/res/drawable/border_button.xml
 corners;obj/Debug/res/drawable/border_imageview.xml
 corners;obj/Debug/res/drawable/border_view.xml
 corners;obj/Debug/res/drawable/custom_editext.xml
+crc64e9f97cf19b8286a9.ChartView;obj/Debug/res/layout/layout_reportlistforshipper.xml
 declare-styleable;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/1/jl/res/values/values.xml
 EditText;obj/Debug/res/layout/layout_admin_create.xml
 EditText;obj/Debug/res/layout/layout_detailitem.xml

@@ -510,3 +510,5 @@
 /Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/android/src/crc648e35430423bd4943/SKGLTextureView_InternalRenderer.java
 /Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/android/src/crc648e35430423bd4943/SKSurfaceView.java
 /Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/android/src/crc64e9f97cf19b8286a9/ChartView.java
+/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/android/src/crc64e602ad2e5aec8cac/AdapterReport.java
+/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/android/src/crc64e602ad2e5aec8cac/AdapterReport_DashBoardViewHolder.java
