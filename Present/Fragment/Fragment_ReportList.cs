@@ -1,6 +1,7 @@
 ﻿
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -12,6 +13,8 @@ using Android.Widget;
 using FlashDelivery.Class;
 using FlashDelivery.Class.Bean;
 using FlashDelivery.Present.Adapter;
+using Microcharts;
+using Microcharts.Droid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +40,7 @@ namespace FlashDelivery.Present.Fragment
         private AndroidX.AppCompat.Widget.Toolbar btnLeftMenu;
         private DrawerLayout drawerLayout;
         private NavigationView navigationView;
+        private ChartView my_chart_report;
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -55,6 +59,7 @@ namespace FlashDelivery.Present.Fragment
             radioMoney = _rootView.FindViewById<RadioButton>(Resource.Id.radioMoneyDB);
             radioKM = _rootView.FindViewById<RadioButton>(Resource.Id.radioKMDB);
             _btnGotoListShip = _rootView.FindViewById<ImageButton>(Resource.Id.btnGotoListShip);
+            my_chart_report = _rootView.FindViewById<ChartView>(Resource.Id.chartView1);
             initValue();
             _btnGotoListShip.Click += _btnGotoListShip_Click;
             radioMoney.Click += RadioMoney_Click;
@@ -121,8 +126,28 @@ namespace FlashDelivery.Present.Fragment
                 recyclerViewDashBoard.NestedScrollingEnabled = false;
                 recyclerViewDashBoard.SetAdapter(dashBoardAdapter);
             }
+            var entries = new[]
+            { new ChartEntry(212)
+                 {
+                     Label = "Fails",
+                     ValueLabel = "212",
+                     Color=SkiaSharp.SKColor.Parse("#e03143"),
+                     ValueLabelColor=SkiaSharp.SKColor.Parse("#e03143"),
+                     
+                 },
+                 new ChartEntry(248)
+                 {
+                     Label = "Success",
+                     ValueLabel = "248",
+                     Color=SkiaSharp.SKColor.Parse("#3254a8"),
+                     ValueLabelColor=SkiaSharp.SKColor.Parse("#3254a8")
+                 },
+                 };
+            var chart = new DonutChart() { Entries = entries };
 
-
+            my_chart_report.Chart = chart;
+            my_chart_report.Chart.LabelTextSize = 30;
+            
 
         }
     }

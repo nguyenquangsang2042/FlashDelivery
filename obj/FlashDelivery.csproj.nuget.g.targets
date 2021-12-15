@@ -86,5 +86,6 @@
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.v4/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.v4.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.v4/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.v4.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.transition/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.Transition.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.transition/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.Transition.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.design/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.Design.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.design/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.Design.targets')" />
+    <Import Project="$(NuGetPackageRoot)skiasharp/2.80.2/buildTransitive/monoandroid1.0/SkiaSharp.targets" Condition="Exists('$(NuGetPackageRoot)skiasharp/2.80.2/buildTransitive/monoandroid1.0/SkiaSharp.targets')" />
   </ImportGroup>
 </Project>

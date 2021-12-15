@@ -1,6 +1,7 @@
 adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 androidx.appcompat.widget.Toolbar;obj/Debug/res/layout/layout_main.xml
+androidx.cardview.widget.CardView;obj/Debug/res/layout/layout_reportlistforshipper.xml
 androidx.drawerlayout.widget.DrawerLayout;obj/Debug/res/layout/layout_main.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/includemain.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_admin_create.xml
@@ -9,7 +10,7 @@ androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_list_ship.
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_profile.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_sumary.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layoutlistship.xml
-attr;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/0/jl/res/values/values.xml
+attr;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/1/jl/res/values/values.xml
 background;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 background;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 Button;obj/Debug/res/layout/layout_detailitem.xml
@@ -17,7 +18,7 @@ Button;obj/Debug/res/layout/layout_popup_report.xml
 Button;obj/Debug/res/layout/layout_signin_signup.xml
 Button;obj/Debug/res/layout/layout_signup.xml
 Button;obj/Debug/res/layout/layoutreport.xml
-cache-path;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/44/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
+cache-path;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/47/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 color;obj/Debug/res/values/colors.xml
 color;obj/Debug/res/values/ic_launcher_background.xml
 com.google.android.material.navigation.NavigationView;obj/Debug/res/layout/layout_main.xml
@@ -25,15 +26,15 @@ corners;obj/Debug/res/drawable/border_button.xml
 corners;obj/Debug/res/drawable/border_imageview.xml
 corners;obj/Debug/res/drawable/border_view.xml
 corners;obj/Debug/res/drawable/custom_editext.xml
-declare-styleable;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/0/jl/res/values/values.xml
+declare-styleable;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/1/jl/res/values/values.xml
 EditText;obj/Debug/res/layout/layout_admin_create.xml
 EditText;obj/Debug/res/layout/layout_detailitem.xml
 EditText;obj/Debug/res/layout/layout_popup_report.xml
 EditText;obj/Debug/res/layout/layout_popupadddetails.xml
 EditText;obj/Debug/res/layout/layout_signin_signup.xml
 EditText;obj/Debug/res/layout/layout_signup.xml
-external-cache-path;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/44/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
-external-path;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/44/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/47/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
+external-path;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/47/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 FrameLayout;obj/Debug/res/layout/layout_dashboard.xml
@@ -80,7 +81,8 @@ LinearLayout;obj/Debug/res/layout/layoutlistship.xml
 LinearLayout;obj/Debug/res/layout/layoutreport.xml
 LinearLayout;obj/Debug/res/layout/navheader.xml
 menu;obj/Debug/res/menu/navmenu.xml
-paths;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/44/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
+Microcharts.Droid.ChartView;obj/Debug/res/layout/layout_reportlistforshipper.xml
+paths;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/47/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 RadioButton;obj/Debug/res/layout/includemain.xml
 RadioButton;obj/Debug/res/layout/layout_list_ship.xml
 RadioButton;obj/Debug/res/layout/layout_signup.xml
@@ -100,7 +102,8 @@ RelativeLayout;obj/Debug/res/layout/layout_signup.xml
 RelativeLayout;obj/Debug/res/layout/layout_sumary.xml
 RelativeLayout;obj/Debug/res/layout/layoutlistship.xml
 RelativeLayout;obj/Debug/res/layout/layoutreport.xml
-resources;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/0/jl/res/values/values.xml
+resources;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/0/jl/res/values/strings.xml
+resources;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/1/jl/res/values/values.xml
 resources;obj/Debug/res/values/colors.xml
 resources;obj/Debug/res/values/ic_launcher_background.xml
 resources;obj/Debug/res/values/strings.xml
@@ -114,6 +117,7 @@ shape;obj/Debug/res/drawable/border_imageview.xml
 shape;obj/Debug/res/drawable/border_view.xml
 shape;obj/Debug/res/drawable/custom_editext.xml
 solid;obj/Debug/res/drawable/custom_editext.xml
+string;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/0/jl/res/values/strings.xml
 string;obj/Debug/res/values/strings.xml
 stroke;obj/Debug/res/drawable/border_imageview.xml
 stroke;obj/Debug/res/drawable/border_view.xml

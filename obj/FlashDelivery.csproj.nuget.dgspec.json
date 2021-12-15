@@ -36,6 +36,10 @@
               "target": "Package",
               "version": "[3.3.3, )"
             },
+            "Microcharts": {
+              "target": "Package",
+              "version": "[0.9.5.9, )"
+            },
             "Refractored.Controls.CircleImageView": {
               "target": "Package",
               "version": "[1.0.1, )"
