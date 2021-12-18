@@ -74,7 +74,7 @@ namespace FlashDelivery
             }
             if (e.MenuItem.ItemId == Resource.Id.navProfile)
             {
-                FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
+                Fragment_Profile fragmentDashBoard = new Fragment_Profile();
                 ShowFragment(FragmentManager, fragmentDashBoard, "");
                 drawer_layout.CloseDrawers();
                 SupportActionBar.Title = "PROFILE";

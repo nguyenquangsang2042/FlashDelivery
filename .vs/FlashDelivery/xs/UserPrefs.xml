@@ -1,34 +1,38 @@
 ﻿<Properties StartupConfiguration="{201F73DE-9531-4B03-B56A-5EBB36F723B1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Present/Adapter/AdapterReport.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Resources/layout/layout_profile.xml">
     <Files>
-      <File FileName="MainActivity.cs" Line="129" Column="57" />
+      <File FileName="MainActivity.cs" Line="77" Column="74" />
+      <File FileName="Present/Fragment/Fragment_Profile.cs" Line="64" Column="72" />
       <File FileName="Class/CmmVariable.cs" />
-      <File FileName="Present/Fragment/FragmentSignInSignUp.cs" />
-      <File FileName="Present/Fragment/Fragment_ReportList.cs" Line="125" Column="47" />
-      <File FileName="Class/Provider/FirebaseHelpdesk.cs" Line="102" Column="48" />
-      <File FileName="Resources/layout/Layout_ReportlistForShipper.xml" Line="47" Column="14" />
-      <File FileName="Class/Bean/BeanItemDetails.cs" Line="23" Column="8" />
-      <File FileName="Present/Adapter/DashBoardAdapter.cs" Line="73" Column="10" />
-      <File FileName="Present/Adapter/AdapterReport.cs" Line="122" Column="2" />
+      <File FileName="Present/Fragment/FragmentSignInSignUp.cs" Line="147" Column="6" />
+      <File FileName="Present/Fragment/Fragment_ReportList.cs" Line="37" Column="30" />
+      <File FileName="Class/Provider/FirebaseHelpdesk.cs" />
+      <File FileName="Resources/layout/Layout_ReportlistForShipper.xml" />
+      <File FileName="Class/Bean/BeanItemDetails.cs" />
+      <File FileName="Present/Adapter/DashBoardAdapter.cs" />
+      <File FileName="Present/Adapter/AdapterReport.cs" />
+      <File FileName="Resources/menu/navmenu.xml" Line="1" Column="1" />
+      <File FileName="Resources/layout/layout_profile.xml" Line="166" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlashDelivery" expanded="True">
             <Node name="FlashDelivery" expanded="True">
-              <Node name="Packages" expanded="True" />
               <Node name="Class" expanded="True">
                 <Node name="Bean" expanded="True" />
                 <Node name="Provider" expanded="True" />
               </Node>
               <Node name="Present" expanded="True">
-                <Node name="Adapter" expanded="True">
-                  <Node name="AdapterReport.cs" selected="True" />
-                </Node>
+                <Node name="Adapter" expanded="True" />
                 <Node name="Fragment" expanded="True" />
               </Node>
               <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True" />
+                <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="layout_profile.xml" selected="True" />
+                </Node>
+                <Node name="menu" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -38,7 +42,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.FlashDelivery AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.7PMZ6HJ7Y9SKR8FM" />
+  <MonoDevelop.Ide.ItemProperties.FlashDelivery AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

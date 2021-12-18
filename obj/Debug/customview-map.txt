@@ -1,6 +1,7 @@
 adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 androidx.appcompat.widget.Toolbar;obj/Debug/res/layout/layout_main.xml
+androidx.cardview.widget.CardView;obj/Debug/res/layout/layout_profile.xml
 androidx.cardview.widget.CardView;obj/Debug/res/layout/layout_reportlistforshipper.xml
 androidx.drawerlayout.widget.DrawerLayout;obj/Debug/res/layout/layout_main.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/includemain.xml
