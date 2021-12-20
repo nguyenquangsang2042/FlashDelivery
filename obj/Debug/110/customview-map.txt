@@ -1,6 +1,5 @@
 adaptive-icon;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
-android.support.design.widget.NavigationView;obj\Debug\110\res\layout\layout_main.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\110\res\layout\layout_main.xml
 androidx.cardview.widget.CardView;obj\Debug\110\res\layout\layout_profile.xml
 androidx.cardview.widget.CardView;obj\Debug\110\res\layout\layout_reportlistforshipper.xml
@@ -11,7 +10,7 @@ androidx.recyclerview.widget.RecyclerView;obj\Debug\110\res\layout\layout_detail
 androidx.recyclerview.widget.RecyclerView;obj\Debug\110\res\layout\layout_list_ship.xml
 androidx.recyclerview.widget.RecyclerView;obj\Debug\110\res\layout\layout_sumary.xml
 androidx.recyclerview.widget.RecyclerView;obj\Debug\110\res\layout\layoutlistship.xml
-attr;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
+attr;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
 background;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\110\res\layout\layout_detailitem.xml
@@ -19,7 +18,7 @@ Button;obj\Debug\110\res\layout\layout_popup_report.xml
 Button;obj\Debug\110\res\layout\layout_signin_signup.xml
 Button;obj\Debug\110\res\layout\layout_signup.xml
 Button;obj\Debug\110\res\layout\layoutreport.xml
-cache-path;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\110\res\values\colors.xml
 color;obj\Debug\110\res\values\ic_launcher_background.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\110\res\layout\layout_main.xml
@@ -28,15 +27,15 @@ corners;obj\Debug\110\res\drawable\border_imageview.xml
 corners;obj\Debug\110\res\drawable\border_view.xml
 corners;obj\Debug\110\res\drawable\custom_editext.xml
 crc64e9f97cf19b8286a9.ChartView;obj\Debug\110\res\layout\layout_reportlistforshipper.xml
-declare-styleable;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
+declare-styleable;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
 EditText;obj\Debug\110\res\layout\layout_admin_create.xml
 EditText;obj\Debug\110\res\layout\layout_detailitem.xml
 EditText;obj\Debug\110\res\layout\layout_popup_report.xml
 EditText;obj\Debug\110\res\layout\layout_popupadddetails.xml
 EditText;obj\Debug\110\res\layout\layout_signin_signup.xml
 EditText;obj\Debug\110\res\layout\layout_signup.xml
-external-cache-path;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
 FrameLayout;obj\Debug\110\res\layout\layout_dashboard.xml
@@ -84,7 +83,7 @@ LinearLayout;obj\Debug\110\res\layout\layoutreport.xml
 LinearLayout;obj\Debug\110\res\layout\navheader.xml
 menu;obj\Debug\110\res\menu\navmenu.xml
 Microcharts.Droid.ChartView;obj\Debug\110\res\layout\layout_reportlistforshipper.xml
-paths;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RadioButton;obj\Debug\110\res\layout\includemain.xml
 RadioButton;obj\Debug\110\res\layout\layout_list_ship.xml
 RadioButton;obj\Debug\110\res\layout\layout_signup.xml
@@ -104,8 +103,8 @@ RelativeLayout;obj\Debug\110\res\layout\layout_signup.xml
 RelativeLayout;obj\Debug\110\res\layout\layout_sumary.xml
 RelativeLayout;obj\Debug\110\res\layout\layoutlistship.xml
 RelativeLayout;obj\Debug\110\res\layout\layoutreport.xml
-resources;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\0\jl\res\values\strings.xml
-resources;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
+resources;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\0\jl\res\values\strings.xml
+resources;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
 resources;obj\Debug\110\res\values\colors.xml
 resources;obj\Debug\110\res\values\ic_launcher_background.xml
 resources;obj\Debug\110\res\values\strings.xml
@@ -119,7 +118,7 @@ shape;obj\Debug\110\res\drawable\border_imageview.xml
 shape;obj\Debug\110\res\drawable\border_view.xml
 shape;obj\Debug\110\res\drawable\custom_editext.xml
 solid;obj\Debug\110\res\drawable\custom_editext.xml
-string;D:\SANGNQ\PROJECT\UdemyProject\FlashDelivery\obj\Debug\110\lp\0\jl\res\values\strings.xml
+string;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\0\jl\res\values\strings.xml
 string;obj\Debug\110\res\values\strings.xml
 stroke;obj\Debug\110\res\drawable\border_imageview.xml
 stroke;obj\Debug\110\res\drawable\border_view.xml

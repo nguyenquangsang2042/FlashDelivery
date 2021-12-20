@@ -14,6 +14,7 @@ using System.Text;
 
 namespace FlashDelivery.Present.Fragment
 {
+    [Obsolete]
     public class FragmentSignUp : Android.App.Fragment
     {
         private MainActivity mainAct;
@@ -48,7 +49,7 @@ namespace FlashDelivery.Present.Fragment
             InitFindbyID();
             firebaseHelpdesk = new FirebaseHelpdesk();
             #region Event
-            InitdatatoSent();
+            //InitdatatoSent();
             _btnRegister_SU.Click += _btnRegister_SU_Click;
             #endregion
             return _rootView;
@@ -69,7 +70,7 @@ namespace FlashDelivery.Present.Fragment
                 lstBeanUser = lstBeanUser.Where(x => x.username == _edtUser_SU.Text && x.passWord == _edtPass_SU.Text).ToList();
                 if(lstBeanUser.Count!=0)
                 {
-                    Toast.MakeText(mainAct.ApplicationContext, " Account Exit ", ToastLength.Long).Show();
+                    Toast.MakeText(mainAct.ApplicationContext, " Account Exits ", ToastLength.Long).Show();
                 }
                 else
                 {
@@ -92,6 +93,9 @@ namespace FlashDelivery.Present.Fragment
                         beanUser.sex = 2;
                     }
                     firebaseHelpdesk.RegisterUser(beanUser);
+
+                    Toast.MakeText(mainAct.ApplicationContext, " Account Created ", ToastLength.Long).Show();
+                    mainAct.FragmentManager.PopBackStack();
                 }
                 
             }

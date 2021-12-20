@@ -105,6 +105,8 @@ namespace FlashDelivery.Present.Fragment
                         CmmVariable.birthday = lstBeanUser[0].birthDay;
                         CmmVariable.location = lstBeanUser[0].Location;
                         CmmVariable.fullname = lstBeanUser[0].fullName;
+                        CmmVariable.phoneNumber = lstBeanUser[0].phoneNumber;
+                        CmmVariable.userType = lstBeanUser[0].type;
 
                         FragmentAdminCreateItem fragmentAdminCreateItem = new FragmentAdminCreateItem();
                         mainAct.ShowFragment(FragmentManager, fragmentAdminCreateItem, "");
@@ -117,6 +119,8 @@ namespace FlashDelivery.Present.Fragment
                         CmmVariable.birthday = lstBeanUser[0].birthDay;
                         CmmVariable.location = lstBeanUser[0].Location;
                         CmmVariable.fullname = lstBeanUser[0].fullName;
+                        CmmVariable.phoneNumber = lstBeanUser[0].phoneNumber;
+                        CmmVariable.userType = lstBeanUser[0].type;
                         FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
                         mainAct.ShowFragment(FragmentManager, fragmentDashBoard, "");
                     }
@@ -150,7 +154,7 @@ namespace FlashDelivery.Present.Fragment
         private void _btnRegister_Click(object sender, EventArgs e)
         {
             FragmentSignUp fragmentSignUp = new FragmentSignUp();
-            mainAct.ShowFragment(FragmentManager, fragmentSignUp, "");
+            mainAct.ShowFragment(FragmentManager, fragmentSignUp, "gotoSigup");
         }
 
 

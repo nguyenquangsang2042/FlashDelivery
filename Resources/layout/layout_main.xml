@@ -28,6 +28,7 @@
         android:layout_gravity="start" 
         android:visibility="gone"/>-->
     <android.support.design.widget.NavigationView
+        app:itemTextColor="@android:color/white"
         android:id="@+id/navigationView1"
         android:background="@color/colorlogo2"
         android:layout_width="300dp"

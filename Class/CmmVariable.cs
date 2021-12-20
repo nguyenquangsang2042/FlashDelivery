@@ -23,5 +23,6 @@ namespace FlashDelivery.Class
         public static string location { get; set; }
         public static string id_firebae { get; set; }
         public static int userType { get; set; }
+        public static string phoneNumber { get; set; }
     }
 }

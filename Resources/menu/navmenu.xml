@@ -6,32 +6,27 @@
 		<item 
 		android:id="@+id/navProfile"
 		android:title="Profile"
-		android:icon="@drawable/profile"
+		
 		/>
 		<item
 		android:id="@+id/navDashBoard"
 		android:title="Dashboard"
-		android:icon="@drawable/profile"
 		/>
 		<item
 		android:id="@+id/navAddItem"
 		android:title="Add Item"
-		android:icon="@drawable/profile"
 		/>
 		<item
 		android:id="@+id/navListShip"
 		android:title="ListShip"
-		android:icon="@drawable/profile"
 		/>
 		<item
 		android:id="@+id/navSummary"
 		android:title="Summary"
-		android:icon="@drawable/profile"
 		/>
 		<item
 		android:id="@+id/navLogout"
 		android:title="Logout"
-		android:icon="@drawable/profile"
 		/>
 	</group>
   

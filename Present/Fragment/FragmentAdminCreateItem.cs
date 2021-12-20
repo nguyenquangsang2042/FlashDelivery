@@ -58,7 +58,7 @@ namespace FlashDelivery.Present.Fragment
             _lnbtlAdd.Click += _lnbtlAdd_Click;
             mainAct.initNavMenu_to_Admin(2);
             mainAct.lockAndUnlockNavBar(false, "Create Item to dashboard");
-            initValue();
+           // initValue();
 
             return _rootView;
         }
