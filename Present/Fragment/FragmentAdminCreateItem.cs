@@ -56,7 +56,8 @@ namespace FlashDelivery.Present.Fragment
             recyclerViewItemchild = _rootView.FindViewById<RecyclerView>(Resource.Id.recyclerViewItemchild);
             tvPublish.Click += TvPublish_Click;
             _lnbtlAdd.Click += _lnbtlAdd_Click;
-
+            mainAct.initNavMenu_to_Admin(2);
+            mainAct.lockAndUnlockNavBar(false, "Create Item to dashboard");
             initValue();
 
             return _rootView;

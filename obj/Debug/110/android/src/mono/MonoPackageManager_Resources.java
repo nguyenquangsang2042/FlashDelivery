@@ -4,8 +4,12 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "FlashDelivery.dll" comes first in this list. */
 		"FlashDelivery.dll",
 		"Firebase.dll",
+		"Microcharts.dll",
+		"Microcharts.Droid.dll",
 		"Newtonsoft.Json.dll",
 		"Refractored.Controls.CircleImageView.dll",
+		"SkiaSharp.dll",
+		"SkiaSharp.Views.Android.dll",
 		"System.Reactive.Core.dll",
 		"System.Reactive.Interfaces.dll",
 		"System.Reactive.Linq.dll",

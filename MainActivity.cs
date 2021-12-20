@@ -35,6 +35,24 @@ namespace FlashDelivery
             StartView = new FragmentStartView();
             ShowFragment(FragmentManager, StartView, "");
         }
+        // mode 1 user 2 addimi
+        public void initNavMenu_to_Admin(int mode)
+        {
+            if (mode == 2)
+            {
+                navigationView.Menu.FindItem(Resource.Id.navDashBoard).SetVisible(false);
+                navigationView.Menu.FindItem(Resource.Id.navListShip).SetVisible(false);
+                navigationView.Menu.FindItem(Resource.Id.navAddItem).SetVisible(true);
+
+            }
+            else
+            {
+                navigationView.Menu.FindItem(Resource.Id.navAddItem).SetVisible(false);
+                navigationView.Menu.FindItem(Resource.Id.navDashBoard).SetVisible(true);
+                navigationView.Menu.FindItem(Resource.Id.navListShip).SetVisible(true);
+            }
+
+        }
         public void lockAndUnlockNavBar(bool Lock, string headerNameToolbar)
         {
             drawer_layout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);

@@ -58,6 +58,7 @@ namespace FlashDelivery.Present.Fragment
             radioMoney.Click += RadioMoney_Click;
             radioMoney.Checked = true;
             radioKM.Click += RadioKM_Click;
+            mainAct.initNavMenu_to_Admin(1);
             mainAct.lockAndUnlockNavBar(false, "DASHBOARD");
             return _rootView;
         }
