@@ -100,6 +100,11 @@ namespace FlashDelivery.Present.Fragment
                     if (lstBeanUser[0].type == CmmVariable.AdminCode)
                     {
                         CmmVariable.userType = CmmVariable.AdminCode;
+                        CmmVariable.user = lstBeanUser[0].username;
+                        CmmVariable.sex = lstBeanUser[0].sex;
+                        CmmVariable.birthday = lstBeanUser[0].birthDay;
+                        CmmVariable.location = lstBeanUser[0].Location;
+                        CmmVariable.fullname = lstBeanUser[0].fullName;
 
                         FragmentAdminCreateItem fragmentAdminCreateItem = new FragmentAdminCreateItem();
                         mainAct.ShowFragment(FragmentManager, fragmentAdminCreateItem, "");
@@ -107,6 +112,11 @@ namespace FlashDelivery.Present.Fragment
                     else
                     {
                         CmmVariable.userType = 0;
+                        CmmVariable.user = lstBeanUser[0].username;
+                        CmmVariable.sex = lstBeanUser[0].sex;
+                        CmmVariable.birthday = lstBeanUser[0].birthDay;
+                        CmmVariable.location = lstBeanUser[0].Location;
+                        CmmVariable.fullname = lstBeanUser[0].fullName;
                         FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
                         mainAct.ShowFragment(FragmentManager, fragmentDashBoard, "");
                     }

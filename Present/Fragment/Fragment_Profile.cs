@@ -24,6 +24,13 @@ namespace FlashDelivery.Present.Fragment
         private EditText _edtUser, _edtPass;
         private TextView _tvForgotPW;
         private FirebaseHelpdesk firebaseHelpdesk;
+        private TextView tvFullname;
+        private TextView tvUsername;
+        private TextView tvTypeAccoumt;
+        private TextView tv_sex;
+        private TextView tvBirthday;
+        private TextView tv_location;
+        private TextView tv_numberphone;
         bool isback = false;
         public override void OnCreate(Bundle savedInstanceState)
         {

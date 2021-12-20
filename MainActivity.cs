@@ -90,6 +90,14 @@ namespace FlashDelivery
                 ShowFragment(FragmentManager, fragmentDashBoard, "");
                 drawer_layout.CloseDrawers();
             }
+            if (e.MenuItem.ItemId == Resource.Id.navAddItem)
+            {
+                FragmentAdminCreateItem fragmentDashBoard = new FragmentAdminCreateItem();
+                ShowFragment(FragmentManager, fragmentDashBoard, "");
+                drawer_layout.CloseDrawers();
+                SupportActionBar.Title = "Add item to dashboard";
+
+            }
             if (e.MenuItem.ItemId == Resource.Id.navProfile)
             {
                 Fragment_Profile fragmentDashBoard = new Fragment_Profile();

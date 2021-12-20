@@ -17,6 +17,10 @@ namespace FlashDelivery.Class
         public static int AdminCode = 123;
         public static string user { get; set; }
         public static string pass { get; set; }
+        public static int sex { get; set; }
+        public static string fullname { get; set; }
+        public static string birthday { get; set; }
+        public static string location { get; set; }
         public static string id_firebae { get; set; }
         public static int userType { get; set; }
     }
