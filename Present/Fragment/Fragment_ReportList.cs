@@ -65,7 +65,7 @@ namespace FlashDelivery.Present.Fragment
             radioMoney.Click += RadioMoney_Click;
             radioMoney.Checked = true;
             radioKM.Click += RadioKM_Click;
-            mainAct.lockAndUnlockNavBar(false, "DASHBOARD");
+            mainAct.lockAndUnlockNavBar(false, "REPORT");
             return _rootView;
         }
 
@@ -117,7 +117,14 @@ namespace FlashDelivery.Present.Fragment
 
             lstBeanItemDetail = await firebaseHelpdesk.GetAllListReport();
             lstBeanItemDetail = await firebaseHelpdesk.GetAllListReport();
-            lstBeanItemDetail = lstBeanItemDetail.Where(x => x.user == CmmVariable.user).ToList();
+            if (CmmVariable.userType == CmmVariable.AdminCode)
+            {
+
+            }
+            else
+            {
+                lstBeanItemDetail = lstBeanItemDetail.Where(x => x.user == CmmVariable.user && x.TypeSHip!=2).ToList();
+            }
             if (lstBeanItemDetail.Count != 0 && lstBeanItemDetail != null)
             {
 
@@ -128,15 +135,18 @@ namespace FlashDelivery.Present.Fragment
                 recyclerViewDashBoard.SetAdapter(dashBoardAdapter);
             }
             var countSuccec = lstBeanItemDetail.Where(x => x.TypeSHip == 1).Count();
-            var counterror = lstBeanItemDetail.Where(x => x.TypeSHip != 1).Count();
-            var entries = new[]
+            var counterror = lstBeanItemDetail.Where(x => x.TypeSHip != 1 && x.TypeSHip != 2).Count();
+            var count_return = lstBeanItemDetail.Where(x => x.TypeSHip == 2).Count();
+            if (CmmVariable.userType == CmmVariable.AdminCode)
+            {
+                var entries = new[]
             { new ChartEntry(counterror)
                  {
                      Label = "Fails",
                      ValueLabel = counterror.ToString(),
                      Color=SkiaSharp.SKColor.Parse("#e03143"),
                      ValueLabelColor=SkiaSharp.SKColor.Parse("#e03143"),
-                     
+
                  },
                  new ChartEntry(countSuccec)
                  {
@@ -145,12 +155,43 @@ namespace FlashDelivery.Present.Fragment
                      Color=SkiaSharp.SKColor.Parse("#3254a8"),
                      ValueLabelColor=SkiaSharp.SKColor.Parse("#3254a8")
                  },
+                 new ChartEntry(countSuccec)
+                 {
+                     Label = "Return for Customer",
+                     ValueLabel = count_return.ToString(),
+                     Color=SkiaSharp.SKColor.Parse("#56fc03"),
+                     ValueLabelColor=SkiaSharp.SKColor.Parse("#56fc03")
+                 },
                  };
-            var chart = new DonutChart() { Entries = entries };
+                var chart = new DonutChart() { Entries = entries };
 
-            my_chart_report.Chart = chart;
+                my_chart_report.Chart = chart;
+            }
+            else
+            {
+                var entries = new[]
+            { new ChartEntry(counterror)
+                 {
+                     Label = "Fails",
+                     ValueLabel = counterror.ToString(),
+                     Color=SkiaSharp.SKColor.Parse("#e03143"),
+                     ValueLabelColor=SkiaSharp.SKColor.Parse("#e03143"),
+
+                 },
+                 new ChartEntry(countSuccec)
+                 {
+                     Label = "Success",
+                     ValueLabel = countSuccec.ToString(),
+                     Color=SkiaSharp.SKColor.Parse("#3254a8"),
+                     ValueLabelColor=SkiaSharp.SKColor.Parse("#3254a8")
+                 },
+            };
+                var chart = new DonutChart() { Entries = entries };
+
+                my_chart_report.Chart = chart;
+            }
             my_chart_report.Chart.LabelTextSize = 30;
-            
+
 
         }
     }

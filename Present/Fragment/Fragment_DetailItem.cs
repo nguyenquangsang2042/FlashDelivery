@@ -26,6 +26,7 @@ namespace FlashDelivery.Present.Fragment
         private LayoutInflater _inflater;
         private ImageButton BtnbackDetailItem;
         private BeanItemDetails beanItemDetails;
+        private BeanReport beanItemDetails1;
         private EditText edtNamePakage;
         private EditText edtLocation;
         private EditText edtKM;
@@ -47,9 +48,14 @@ namespace FlashDelivery.Present.Fragment
 
             // Create your fragment here
         }
-        public Fragment_DetailItem(BeanItemDetails beanItemDetails,bool isListShip=false)
+        public Fragment_DetailItem(BeanItemDetails beanItemDetails, bool isListShip = false)
         {
             this.beanItemDetails = beanItemDetails;
+            this.isListShip = isListShip;
+        }
+        public Fragment_DetailItem(BeanReport beanItemDetails, bool isListShip = false)
+        {
+            this.beanItemDetails1 = beanItemDetails;
             this.isListShip = isListShip;
         }
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -72,15 +78,28 @@ namespace FlashDelivery.Present.Fragment
             linearLayoutListSHip = _rootView.FindViewById<LinearLayout>(Resource.Id.linearLayoutListSHip);
 
             initValue();
-            if(isListShip)
+            if (isListShip)
             {
                 btnAddtoListShip.Visibility = ViewStates.Gone;
                 linearLayoutListSHip.Visibility = ViewStates.Visible;
             }
             else
             {
-                btnAddtoListShip.Visibility = ViewStates.Visible;
-                linearLayoutListSHip.Visibility = ViewStates.Gone;
+                if (beanItemDetails1 == null)
+                {
+                    btnAddtoListShip.Visibility = ViewStates.Visible;
+                    linearLayoutListSHip.Visibility = ViewStates.Gone;
+                }
+                else if (beanItemDetails1.TypeSHip == 0)
+                {
+                    btnAddtoListShip.Visibility = ViewStates.Visible;
+                    linearLayoutListSHip.Visibility = ViewStates.Gone;
+                }
+                else if(beanItemDetails1.TypeSHip!=0)
+                {
+                    btnAddtoListShip.Visibility = ViewStates.Gone;
+                    linearLayoutListSHip.Visibility = ViewStates.Gone;
+                }    
             }
             BtnbackDetailItem.Click += BtnbackDetailItem_Click;
             btnAddtoListShip.Click += BtnAddtoListShip_Click;
@@ -106,7 +125,17 @@ namespace FlashDelivery.Present.Fragment
             };
             firebaseHelpdesk.AddItemToReport(beanReport);
             firebaseHelpdesk.DeleteItemListShipToMoveReport(beanItemDetails);
-            mainAct.FragmentManager.PopBackStack();
+
+            if (isListShip)
+            {
+                FragmentListShip fragmentListShip = new FragmentListShip();
+                mainAct.ShowFragment(FragmentManager, fragmentListShip, "");
+            }
+            else
+            {
+                Fragment_ReportList fragment_ReportList = new Fragment_ReportList();
+                mainAct.ShowFragment(FragmentManager, fragment_ReportList, "");
+            }
             Toast.MakeText(this.Activity, "Update Success", ToastLength.Short).Show();
         }
 
@@ -120,48 +149,73 @@ namespace FlashDelivery.Present.Fragment
             edt_Noidunfreport = popupDialog.FindViewById<EditText>(Resource.Id.edt_Noidunfreport);
             Button btnSendReport = popupDialog.FindViewById<Button>(Resource.Id.btnSendReport);
             btnSendReport.Click += BtnSendReport_Click;
-            
+
         }
 
         private void BtnSendReport_Click(object sender, EventArgs e)
         {
-            BeanReport beanReport = new BeanReport { 
-                DateTime=DateTime.Now,
-                kilomet=beanItemDetails.kilomet,
-                ListItemChild=beanItemDetails.ListItemChild,
-                location=beanItemDetails.location,
-               Money=beanItemDetails.Money,
-               pakage_Name=beanItemDetails.pakage_Name,
-               user=beanItemDetails.user,
-                pass=beanItemDetails.pass,
-                TypeSHip=1,         
+            BeanReport beanReport = new BeanReport
+            {
+                DateTime = DateTime.Now,
+                kilomet = beanItemDetails.kilomet,
+                ListItemChild = beanItemDetails.ListItemChild,
+                location = beanItemDetails.location,
+                Money = beanItemDetails.Money,
+                pakage_Name = beanItemDetails.pakage_Name,
+                user = beanItemDetails.user,
+                pass = beanItemDetails.pass,
+                TypeSHip = 1,
                 DetailReport = edt_Noidunfreport.Text
             };
             firebaseHelpdesk.AddItemToReport(beanReport);
             firebaseHelpdesk.DeleteItemListShipToMoveReport(beanItemDetails);
             popupDialog.Dismiss();
-            mainAct.FragmentManager.PopBackStack();
+
+            if (isListShip)
+            {
+                FragmentListShip fragmentListShip = new FragmentListShip();
+                mainAct.ShowFragment(FragmentManager, fragmentListShip, "");
+            }
+            else
+            {
+                Fragment_ReportList fragment_ReportList = new Fragment_ReportList();
+                mainAct.ShowFragment(FragmentManager, fragment_ReportList, "");
+            }
             Toast.MakeText(this.Activity, "Update Success", ToastLength.Short).Show();
 
         }
 
         private void BtnAddtoListShip_Click(object sender, EventArgs e)
         {
-            Toast.MakeText(this.Context, "Move to list ship success", ToastLength.Short).Show();
-            BeanItemShip beanItemShip = new BeanItemShip
+            if(beanItemDetails1!=null)
             {
-                user=CmmVariable.user,
-                pass=CmmVariable.pass,
-                kilomet=beanItemDetails.kilomet,
-                ListItemChild= beanItemDetails.ListItemChild,
-                location= beanItemDetails.location,
-                Money=beanItemDetails.Money,
-                pakage_Name= beanItemDetails.pakage_Name
+                firebaseHelpdesk.DeleteItemReport(beanItemDetails1);
+                beanItemDetails1.TypeSHip = 2;
+                firebaseHelpdesk.AddItemToReport(beanItemDetails1);
+                Fragment_ReportList fragment_ReportList = new Fragment_ReportList();
+                mainAct.ShowFragment(FragmentManager, fragment_ReportList, "");
+            } 
+            else
+            {
+                Toast.MakeText(this.Context, "Move to list ship success", ToastLength.Short).Show();
+                BeanItemShip beanItemShip = new BeanItemShip
+                {
+                    user = CmmVariable.user,
+                    pass = CmmVariable.pass,
+                    kilomet = beanItemDetails.kilomet,
+                    ListItemChild = beanItemDetails.ListItemChild,
+                    location = beanItemDetails.location,
+                    Money = beanItemDetails.Money,
+                    pakage_Name = beanItemDetails.pakage_Name
 
-            };
-            firebaseHelpdesk.AddItemToListShip(beanItemShip);
-            firebaseHelpdesk.DeleteItemToListDashBoard(beanItemDetails);
-            mainAct.FragmentManager.PopBackStack();
+                };
+                firebaseHelpdesk.AddItemToListShip(beanItemShip);
+                firebaseHelpdesk.DeleteItemToListDashBoard(beanItemDetails);
+                FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
+                mainAct.ShowFragment(FragmentManager, fragmentDashBoard, "");
+            }
+            
+
         }
 
         private void initValue()
@@ -184,10 +238,52 @@ namespace FlashDelivery.Present.Fragment
                 recyclerViewItemchild.SetAdapter(itemChildAdapter);
             }
 
+            if (beanItemDetails1 != null)
+            {
+                edtNamePakage.Text = beanItemDetails1.pakage_Name;
+                edtLocation.Text = beanItemDetails1.location;
+                edtKM.Text = beanItemDetails1.kilomet.ToString();
+                edtMoney.Text = beanItemDetails1.Money.ToString();
+                lstItemChild.AddRange(beanItemDetails1.ListItemChild);
+                itemChildAdapter = new ItemChildAdapter(lstItemChild);
+                recyclerViewItemchild.SetLayoutManager(new LinearLayoutManager(_rootView.Context));
+                recyclerViewItemchild.NestedScrollingEnabled = false;
+                recyclerViewItemchild.SetAdapter(itemChildAdapter);
+                btnAddtoListShip.Text = "Remove to Trash";
+                if (beanItemDetails1.TypeSHip == 0)
+                {
+                    btnAddtoListShip.Visibility = ViewStates.Gone;
+                }
+                else
+                {
+                    if(CmmVariable.userType!=CmmVariable.AdminCode)
+                        btnAddtoListShip.Visibility = ViewStates.Gone;
+                }
+
+            }
+
         }
         private void BtnbackDetailItem_Click(object sender, EventArgs e)
         {
-            mainAct.FragmentManager.PopBackStack();
+            if (beanItemDetails1!=null)
+            {
+                Fragment_ReportList fragment_ReportList = new Fragment_ReportList();
+                mainAct.ShowFragment(FragmentManager, fragment_ReportList, "");
+            }
+            else
+            {
+                if(isListShip)
+                {
+                    FragmentListShip fragmentListShip = new FragmentListShip();
+                    mainAct.ShowFragment(FragmentManager, fragmentListShip, "");
+                }   
+                else
+                {
+                    FragmentDashBoard fragmentDashBoard = new FragmentDashBoard();
+                    mainAct.ShowFragment(FragmentManager, fragmentDashBoard, "");
+                }    
+            }
+
         }
     }
 }

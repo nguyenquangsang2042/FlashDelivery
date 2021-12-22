@@ -13,6 +13,7 @@ namespace FlashDelivery.Class.Bean
 {
     public class BeanReport
     {
+        public string key { get; set; }
         public string user { get; set; }
         public string pass { get; set; }
         public string pakage_Name { get; set; }

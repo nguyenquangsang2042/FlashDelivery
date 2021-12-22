@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OJ3tACP/la9ghTx8lc6dJEJuM2cUnOO+WrXwI3NOVfDRw/G/xKdTDXJz5XICuUjFX7LWq98wtnPb7CtM5gtdoQ==",
+  "dgSpecHash": "dTecahXNuxBo5EtLjcif3PZhMFkuYTRBI9LON9/EkWzEUlW82Q0KX1BIzx4GY49NGD3spjNDSIZ56+M2pH6f5Q==",
   "success": true,
   "projectFilePath": "D:\\Project\\ReCloneFlashDelivery\\FlashDelivery.csproj",
   "expectedPackageFiles": [
@@ -135,7 +135,7 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.migration\\1.0.8\\xamarin.androidx.migration.1.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.multidex\\2.0.1.5\\xamarin.androidx.multidex.2.0.1.5.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\xamarin.androidx.print\\1.0.0.10\\xamarin.androidx.print.1.0.0.10.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.recyclerview\\1.1.0.1\\xamarin.androidx.recyclerview.1.1.0.1.nupkg.sha512",
+    "C:\\Users\\nguye\\.nuget\\packages\\xamarin.androidx.recyclerview\\1.2.1.3\\xamarin.androidx.recyclerview.1.2.1.3.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\xamarin.androidx.savedstate\\1.1.0.4\\xamarin.androidx.savedstate.1.1.0.4.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\xamarin.androidx.slidingpanelayout\\1.1.0.5\\xamarin.androidx.slidingpanelayout.1.1.0.5.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\xamarin.androidx.swiperefreshlayout\\1.1.0.5\\xamarin.androidx.swiperefreshlayout.1.1.0.5.nupkg.sha512",

@@ -92,6 +92,7 @@ namespace FlashDelivery.Class
               .Child("BeanReport")
               .OnceAsync<BeanReport>()).Select(item => new BeanReport
               {
+                  key=item.Key,
                   user = item.Object.user,
                   pass = item.Object.pass,
                   pakage_Name = item.Object.pakage_Name,
@@ -140,6 +141,16 @@ namespace FlashDelivery.Class
             ).ToList();
             await firebase
               .Child("BeanListShip").Child(temp[0].key).DeleteAsync();
+        }
+
+        public async Task DeleteItemReport(BeanReport beanItemDetails)
+        {
+            List<BeanReport> temp = await GetAllListReport();
+            temp = temp.Where(x =>
+            x.pakage_Name == beanItemDetails.pakage_Name && x.user == beanItemDetails.user
+            ).ToList();
+            await firebase
+              .Child("BeanReport").Child(temp[0].key).DeleteAsync();
         }
     }
 }

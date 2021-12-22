@@ -95,6 +95,8 @@ namespace FlashDelivery.Present.Adapter
                 KM = itemView.FindViewById<TextView>(Resource.Id.tvKMDB);
                 linearLayoutDashBoard = itemView.FindViewById<LinearLayout>(Resource.Id.linearLayoutDashBoard);
 
+                linearLayoutDashBoard.Click += LinearLayoutDashBoard_Click;
+
 
 
 
@@ -102,7 +104,15 @@ namespace FlashDelivery.Present.Adapter
 
             }
 
-            
+            private void LinearLayoutDashBoard_Click(object sender, EventArgs e)
+            {
+               
+                    Fragment_DetailItem fragment_DetailItem = new Fragment_DetailItem(beanItemDetails, isListShip);
+                    mainAct.ShowFragment(mainAct.FragmentManager, fragment_DetailItem, "");
+                
+            }
+
+
         }
     }
 

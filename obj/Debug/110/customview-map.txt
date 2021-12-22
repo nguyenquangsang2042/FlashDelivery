@@ -26,7 +26,6 @@ corners;obj\Debug\110\res\drawable\border_button.xml
 corners;obj\Debug\110\res\drawable\border_imageview.xml
 corners;obj\Debug\110\res\drawable\border_view.xml
 corners;obj\Debug\110\res\drawable\custom_editext.xml
-crc64e9f97cf19b8286a9.ChartView;obj\Debug\110\res\layout\layout_reportlistforshipper.xml
 declare-styleable;D:\Project\ReCloneFlashDelivery\obj\Debug\110\lp\1\jl\res\values\values.xml
 EditText;obj\Debug\110\res\layout\layout_admin_create.xml
 EditText;obj\Debug\110\res\layout\layout_detailitem.xml
