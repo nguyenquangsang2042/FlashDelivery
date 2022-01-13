@@ -8,7 +8,6 @@ androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/includemain.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_admin_create.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_detailitem.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_list_ship.xml
-androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_profile.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layout_sumary.xml
 androidx.recyclerview.widget.RecyclerView;obj/Debug/res/layout/layoutlistship.xml
 attr;/Users/sang/Documents/GitHub/FlashDelivery/obj/Debug/lp/1/jl/res/values/values.xml

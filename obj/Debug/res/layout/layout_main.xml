@@ -3,4 +3,4 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start" 
-        android:visibility="gone"/>--><com.google.android.material.navigation.NavigationView android:id="@+id/navigationView1" android:background="@color/colorlogo2" android:layout_width="300dp" android:layout_height="match_parent" android:layout_gravity="start" app:headerLayout="@layout/navheader" app:menu="@menu/navmenu" android:visibility="gone" /></androidx.drawerlayout.widget.DrawerLayout>
+        android:visibility="gone"/>--><com.google.android.material.navigation.NavigationView app:itemTextColor="@android:color/white" android:id="@+id/navigationView1" android:background="@color/colorlogo2" android:layout_width="300dp" android:layout_height="match_parent" android:layout_gravity="start" app:headerLayout="@layout/navheader" app:menu="@menu/navmenu" android:visibility="gone" /></androidx.drawerlayout.widget.DrawerLayout>

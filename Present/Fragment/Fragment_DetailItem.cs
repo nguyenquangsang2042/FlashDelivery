@@ -90,16 +90,21 @@ namespace FlashDelivery.Present.Fragment
                     btnAddtoListShip.Visibility = ViewStates.Visible;
                     linearLayoutListSHip.Visibility = ViewStates.Gone;
                 }
-                else if (beanItemDetails1.TypeSHip == 0)
+                else if (beanItemDetails1.TypeSHip == 1)
                 {
                     btnAddtoListShip.Visibility = ViewStates.Visible;
                     linearLayoutListSHip.Visibility = ViewStates.Gone;
                 }
-                else if(beanItemDetails1.TypeSHip!=0)
+                else if(beanItemDetails1.TypeSHip==0)
                 {
                     btnAddtoListShip.Visibility = ViewStates.Gone;
                     linearLayoutListSHip.Visibility = ViewStates.Gone;
-                }    
+                }
+                else
+                {
+                    btnAddtoListShip.Visibility = ViewStates.Gone;
+                    linearLayoutListSHip.Visibility = ViewStates.Gone;
+                }
             }
             BtnbackDetailItem.Click += BtnbackDetailItem_Click;
             btnAddtoListShip.Click += BtnAddtoListShip_Click;
@@ -249,7 +254,7 @@ namespace FlashDelivery.Present.Fragment
                 recyclerViewItemchild.SetLayoutManager(new LinearLayoutManager(_rootView.Context));
                 recyclerViewItemchild.NestedScrollingEnabled = false;
                 recyclerViewItemchild.SetAdapter(itemChildAdapter);
-                btnAddtoListShip.Text = "Remove to Trash";
+                btnAddtoListShip.Text = "return to customer";
                 if (beanItemDetails1.TypeSHip == 0)
                 {
                     btnAddtoListShip.Visibility = ViewStates.Gone;
@@ -258,6 +263,9 @@ namespace FlashDelivery.Present.Fragment
                 {
                     if(CmmVariable.userType!=CmmVariable.AdminCode)
                         btnAddtoListShip.Visibility = ViewStates.Gone;
+                    else
+                        btnAddtoListShip.Visibility = ViewStates.Visible;
+                    
                 }
 
             }

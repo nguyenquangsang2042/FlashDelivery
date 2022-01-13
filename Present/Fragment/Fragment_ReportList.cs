@@ -134,9 +134,9 @@ namespace FlashDelivery.Present.Fragment
                 recyclerViewDashBoard.NestedScrollingEnabled = false;
                 recyclerViewDashBoard.SetAdapter(dashBoardAdapter);
             }
-            var countSuccec = lstBeanItemDetail.Where(x => x.TypeSHip == 1).Count();
-            var counterror = lstBeanItemDetail.Where(x => x.TypeSHip != 1 && x.TypeSHip != 2).Count();
-            var count_return = lstBeanItemDetail.Where(x => x.TypeSHip == 2).Count();
+            var countSuccec = lstBeanItemDetail.Where(x => x.TypeSHip == 0).Count();
+            var counterror = lstBeanItemDetail.Where(x => x.TypeSHip == 1).Count();
+            var count_return = lstBeanItemDetail.Where(x => x.TypeSHip != 1 && x.TypeSHip!=0).Count();
             if (CmmVariable.userType == CmmVariable.AdminCode)
             {
                 var entries = new[]

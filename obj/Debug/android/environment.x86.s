@@ -2,8 +2,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.flashdelivery"
-	.size	.L.env.str.1, 30
+	.asciz	"com.tuanlh.flashdelivery"
+	.size	.L.env.str.1, 25
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	2
@@ -71,7 +71,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"88dd8461-efaa-4140-9c32-5e4b25a89029"
+	.asciz	"7acbcaa1-98ee-4382-877d-c029aaff9a91"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

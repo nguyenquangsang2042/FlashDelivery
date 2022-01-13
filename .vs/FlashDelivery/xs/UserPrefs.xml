@@ -1,18 +1,11 @@
 ﻿<Properties StartupConfiguration="{201F73DE-9531-4B03-B56A-5EBB36F723B1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Resources/layout/layout_profile.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Present/Fragment/Fragment_DetailItem.cs">
     <Files>
-      <File FileName="MainActivity.cs" Line="77" Column="74" />
-      <File FileName="Present/Fragment/Fragment_Profile.cs" Line="64" Column="72" />
-      <File FileName="Class/CmmVariable.cs" />
-      <File FileName="Present/Fragment/FragmentSignInSignUp.cs" Line="147" Column="6" />
-      <File FileName="Present/Fragment/Fragment_ReportList.cs" Line="37" Column="30" />
-      <File FileName="Class/Provider/FirebaseHelpdesk.cs" />
-      <File FileName="Resources/layout/Layout_ReportlistForShipper.xml" />
-      <File FileName="Class/Bean/BeanItemDetails.cs" />
-      <File FileName="Present/Adapter/DashBoardAdapter.cs" />
+      <File FileName="Present/Fragment/FragmentListShip.cs" Line="1" Column="1" />
+      <File FileName="Present/Fragment/Fragment_DetailItem.cs" Line="257" Column="60" />
+      <File FileName="Present/Fragment/Fragment_ReportList.cs" />
+      <File FileName="MainActivity.cs" />
       <File FileName="Present/Adapter/AdapterReport.cs" />
-      <File FileName="Resources/menu/navmenu.xml" Line="1" Column="1" />
-      <File FileName="Resources/layout/layout_profile.xml" Line="166" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,13 +18,13 @@
               </Node>
               <Node name="Present" expanded="True">
                 <Node name="Adapter" expanded="True" />
-                <Node name="Fragment" expanded="True" />
+                <Node name="Fragment" expanded="True">
+                  <Node name="Fragment_DetailItem.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True">
-                  <Node name="layout_profile.xml" selected="True" />
-                </Node>
+                <Node name="layout" expanded="True" />
                 <Node name="menu" expanded="True" />
               </Node>
             </Node>
@@ -44,7 +37,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.FlashDelivery AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/sang/Documents/GitHub/FlashDelivery/Present/Fragment/Fragment_DetailItem.cs" relfile="Present/Fragment/Fragment_DetailItem.cs" line="257" column="1" />
+      <Breakpoint file="/Users/sang/Documents/GitHub/FlashDelivery/Present/Fragment/Fragment_DetailItem.cs" relfile="Present/Fragment/Fragment_DetailItem.cs" line="81" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
